@@ -6,8 +6,10 @@ int main() {
   cin >> n;
   int sum = 0;
   for(int i = 1; i <= n; i++) {
-    sum += i;
-    // cout << "sum - " << sum << " i - " << i << endl;
+    int a;
+    cin >> a;
+    if(a % 10 == 7) sum++;
   }
   cout << sum;
+  return 0;
 }
