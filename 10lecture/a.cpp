@@ -10,8 +10,10 @@ int main() {
     currentWord += s[i];
     if(isdigit(s[i])) containsDigit = true;
 
-    if(s[i] == ' ' && !containsDigit) {
-      cout << currentWord << endl;
+    if(s[i] == ' ' || i == s.size() - 1) {
+      if(!containsDigit) {
+        cout << currentWord << endl;
+      }
       currentWord = "";
       containsDigit = false;
     }
