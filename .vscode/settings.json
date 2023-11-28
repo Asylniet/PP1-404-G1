@@ -3,6 +3,7 @@
     "complex": "cpp",
     "iostream": "cpp",
     "ios": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "set": "cpp"
   }
 }
