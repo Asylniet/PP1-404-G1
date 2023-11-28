@@ -7,27 +7,29 @@ int main() {
   cin >> s;
   queue<char> q;
   queue<char> q2;
-  for(int i = 0; i < s.size(); i++) {
-    q.push(s[i]);
-  }
-  char current = ' ';
-  while(!q.empty()) {
-    if(current == '1') current = ' ';
-    else if(q.front() == '1') current = q.front();
-    else {
-      q2.push(current);
-      q2.push(q.front());
-      current = ' ';
-    };
 
+  for(int i = 0; i< s.size(); i++) q.push(s[i]);
+
+  char temp = ' ';
+  while(!q.empty()) {
+    if(q.front() == '1') {
+      if(temp == ' ') temp = q.front();
+      else temp = ' '; // temp == '1'
+    } else { // q.front() == '0'
+      if(temp == '1') {
+        q2.push(temp);
+        temp = ' ';
+      }
+      q2.push(q.front());
+    }
     q.pop();
   }
-  if(current != ' ') q2.push(current);
-  
+  if(temp == '1') q2.push(temp);
+
   while(!q2.empty()) {
     cout << q2.front();
     q2.pop();
   }
-
+  
   return 0;
 }
