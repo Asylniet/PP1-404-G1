@@ -4,6 +4,11 @@
     "iostream": "cpp",
     "ios": "cpp",
     "stack": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "map": "cpp",
+    "__node_handle": "cpp",
+    "iosfwd": "cpp",
+    "string": "cpp",
+    "__config": "cpp"
   }
 }
