@@ -1,0 +1,40 @@
+# Queue
+
+Queue is great, because it just exists)
+
+## Create queue - `queue<int> q;`
+
+## Put some elements:
+```
+q.push(10);
+q.push(20);
+q.push(30);
+```
+q = [10, 20, 30]
+
+## Edit elements:
+Very hard, probably you should not do it
+
+## Get elements:
+`q.front();`
+If q = [10, 20, 30] the answer is 10, because 10 is in the front
+
+`q.back();`
+If q = [10, 20, 30] the answer is 30, because 30 is in the back
+
+## Iterate through queue:
+The very interesting part. In order to get to some element you need to go through almost all of them:
+```
+while(!q.empty()) {  // While the q is NOT empty
+  cout << q.front(); // Print first element
+  q.pop();           // Delete the first element, so that every element shifts forward
+}
+```
+
+## Delete elements:
+```
+q.pop();
+
+```
+Before: q = [10, 20, 30];
+After: q = [20, 30];
