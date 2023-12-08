@@ -13,14 +13,15 @@ bool isPrime(int n) {
 int main() {
   int n;
   cin >> n;
-  int number = 2;
+  int number = 1;
   int primeIndex = 0;
   int superPrimeIndex = 0;
   while(superPrimeIndex < n) {
-    if(isPrime(number)) primeIndex++;
-    if(isPrime(primeIndex)) superPrimeIndex++;
-    cout << number << " - pI: " << primeIndex << " sI: " << superPrimeIndex << endl; 
     number++;
+    if(isPrime(number)) {
+      primeIndex++;
+      if(isPrime(primeIndex)) superPrimeIndex++;
+    }
   }
 
   cout << number;
