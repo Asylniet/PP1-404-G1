@@ -1,0 +1,37 @@
+# Stack
+
+Stack is great, because it just exists)
+
+## Create stack - `stack<int> st;`
+
+## Put some elements:
+```
+st.push(10);
+st.push(20);
+st.push(30);
+```
+q = [30, 20, 10]
+
+## Edit elements:
+Very hard, probably you should not do it
+
+## Get elements:
+`st.top();`
+If st = [30, 20, 10] the answer is 30, because 30 is at the top
+
+## Iterate through queue:
+The very interesting part. In order to get to some element you need to go through almost all of them:
+```
+while(!st.empty()) {  // While the st is NOT empty
+  cout << st.top();   // Print top element
+  st.pop();           // Delete the top element, so that it reveals the bottom ones
+}
+```
+
+## Delete elements:
+```
+st.pop();
+
+```
+Before: st = [30, 20, 10];
+After: st = [20, 10];
