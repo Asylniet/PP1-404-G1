@@ -12,6 +12,7 @@
     "__config": "cpp",
     "queue": "cpp",
     "deque": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "ostream": "cpp"
   }
 }
